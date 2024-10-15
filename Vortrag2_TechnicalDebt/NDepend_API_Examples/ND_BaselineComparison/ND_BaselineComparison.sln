@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{AA6C8D78-22FF-423A-9C7C-5F2393824E04}") = "ND_BaselineComparison", "ND_BaselineComparison.xsproj", "{E77B2DBA-ED18-45D7-BE97-41EEB89D2190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E77B2DBA-ED18-45D7-BE97-41EEB89D2190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77B2DBA-ED18-45D7-BE97-41EEB89D2190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77B2DBA-ED18-45D7-BE97-41EEB89D2190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77B2DBA-ED18-45D7-BE97-41EEB89D2190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E65B04E-B6FF-481E-B182-252C5BE8D69C}
+	EndGlobalSection
+EndGlobal

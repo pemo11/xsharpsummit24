@@ -1,0 +1,11 @@
+id;title;pubYear;publisher;mainAuthor;price;pages;isbn13;lang;edition
+1;Numerical Recipes in Fortran 77: The Art of Scientific Computing;1992;Cambridge University Press;William H.;99,99 USD;1010;9780521430647;en;2
+2;Guide to Fortran 2008 Programming;2015;Springer;Brainerd, Walter S.;69,99 USD;419;9781447167587;en;2
+3;A FORTRAN Coloring Book;1978;MIT Press;Kaufman, Roger;9,95 USD;285;9780262610261;en;1
+4;FORTRAN 77 for humans;1980;West Pub. Co;Page, Rex L;34,72 EUR;462;9780829902716;en;1
+5;Guide to Fortran Programming;1961;John Wiley & Sons;McCracken, Daniel D.;-1;88 USD;9780471582120;en;1
+6;Methodik der Programmierung in Pascal;1994;Rudolf Marty;Springer;49,99 EUR;212;354058093X;de;4
+7;Objektorientierte Programmierung in Oberon-2;1998;Oldenbourg Wissenschaftsverlag;Hanspeter Moessenboeck;74,95 EUR;348;9783540646495;de;3
+8;Assembler: Grundlagen der PC-Programmierung;2005;;Ernst-Wolfgang Dieterich;49,95 EUR;368;978-3486200010;de;5
+9;Programmieren in ALGOL 68;1974;De Gruiter;Sietse G. van der Meule;-1;-1;9783110830927;de;1
+10;Smalltalk-80: The Language and its Implementation;1983;Addison Wesley;Adele Goldberg;-1-;-1;9780201113716;en;1

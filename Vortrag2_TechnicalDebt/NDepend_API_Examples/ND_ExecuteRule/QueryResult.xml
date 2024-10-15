@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Query ProjectNameAndDate="" NbNodeMatched="10" NbNodeTested="8633" KindOfNode=" methods">
+  <Columns>
+    <Column>10 methods</Column>
+    <Column># lines of code (LOC)</Column>
+  </Columns>
+  <Rows>
+    <Row Name=".ctor(String[])" FullName="EurekaFach.Form1..ctor(String[])">
+      <Val CellStyle="m4" SortId="06">62</Val>
+    </Row>
+    <Row Name=".ctor(String,UserDaten)" FullName="EurekaFach.Erledlagsa..ctor(String,UserDaten)">
+      <Val CellStyle="m0" SortId="08">61</Val>
+    </Row>
+    <Row Name=".ctor(String,UserDaten)" FullName="EurekaFach.ErledLSG..ctor(String,UserDaten)">
+      <Val CellStyle="m22" SortId="04">66</Val>
+    </Row>
+    <Row Name=".ctor(String,UserDaten)" FullName="EurekaFach.ErledLSGErst..ctor(String,UserDaten)">
+      <Val CellStyle="m4" SortId="07">62</Val>
+    </Row>
+    <Row Name=".ctor(String,UserDaten)" FullName="EurekaFach.ErledSG..ctor(String,UserDaten)">
+      <Val CellStyle="m9" SortId="05">63</Val>
+    </Row>
+    <Row Name=".ctor(String,UserDaten)" FullName="EurekaFach.ErledVGKlage..ctor(String,UserDaten)">
+      <Val CellStyle="m0" SortId="09">61</Val>
+    </Row>
+    <Row Name=".ctor(String,String,Int32,String)" FullName="EurekaFach.ChartEingangErledigung..ctor(String,String,Int32,String)">
+      <Val CellStyle="m36" SortId="03">69</Val>
+    </Row>
+    <Row Name=".ctor(Int32)" FullName="EurekaFach.ChartGeschaeftsentwicklung..ctor(Int32)">
+      <Val CellStyle="m54" SortId="01">73</Val>
+    </Row>
+    <Row Name=".ctor(Int32,Form1,String)" FullName="EurekaFach.Streitliste..ctor(Int32,Form1,String)">
+      <Val CellStyle="m54" SortId="02">73</Val>
+    </Row>
+    <Row Name=".ctor(__Array)" FullName="EurekaFach.SLDaten..ctor(__Array)">
+      <Val CellStyle="m100" SortId="00">83</Val>
+    </Row>
+    <Row Name="Sum:" FullName="Stat">
+      <Val>673</Val>
+    </Row>
+    <Row Name="Average:" FullName="Stat">
+      <Val>67.3</Val>
+    </Row>
+    <Row Name="Minimum:" FullName="Stat">
+      <Val>61</Val>
+    </Row>
+    <Row Name="Maximum:" FullName="Stat">
+      <Val>83</Val>
+    </Row>
+    <Row Name="Standard deviation:" FullName="Stat">
+      <Val>6.86</Val>
+    </Row>
+    <Row Name="Variance:" FullName="Stat">
+      <Val>47.01</Val>
+    </Row>
+  </Rows>
+</Query>

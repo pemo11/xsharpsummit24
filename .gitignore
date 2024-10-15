@@ -1,0 +1,9 @@
+**/bin/Debug/
+**/bin/Release/
+**/obj
+**/.vs
+**/.cr
+NDependOut
+TestResults
+**/.xsproj.user
+**/OutputDir
