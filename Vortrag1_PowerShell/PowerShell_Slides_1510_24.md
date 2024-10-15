@@ -1,6 +1,6 @@
 # PowerShell as the X\# developers (new) friend
 
-Last update: **14/10/24**
+Last update: **15/10/24**
 
 ## topics
 
@@ -16,6 +16,54 @@ Last update: **14/10/24**
 - Simple database access
 - Static source code analysis
 ---
+
+## What is the best friend of a software developer?
+
+_ChatGPT_ lists six best friends:
+
+1. Version Control Systems (VCS) - Git
+2. Integrated Development Environments (IDEs)
+3. Stack Overflow (and other developer communities)
+4. Documentation
+5. Automation Tools
+6. Coffee (or any preferred source of energy)
+
+## Why coffee?
+
+ChatGPT says this about the effect of Coffee:
+
+"caffeine helps boost alertness and focus, which can be essential when debugging or writing complex code late into the night"
+
+## Who is missing?
+
+Of course, one new friend is missing from the list.
+
+Please think about it for a second or two.
+
+Who can it be? Who can it be?
+
+Its AI of course. Out new best friend.
+
+Whether its _CoPilot_, _Q_, _TabNine_, _Replit AI_ or many others. Coding assistants are everywhere.
+
+## Why is AI our new best friend?
+
+Lets asks _ChatGPT_ again:
+
+- Code Assistance and Autocompletion
+- Bug Detection and Debugging
+- Testing Automation
+- Natural Language Processing (NLP) for Documentation
+- Code Refactoring
+- Project Management and Issue Tracking
+- Learning and Skill Development
+- AI in Continuous Integration/Continuous Delivery (CI/CD)
+
+## What is the hottest new programming language?
+
+English, German or any other language the AI assistant understands.
+
+But now to the main topic...
 
 ## What is PowerShell?
 
