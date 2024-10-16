@@ -88,6 +88,6 @@ It not perfect of course, it has no formatting and the examples are little to si
 
 And all too in less than 1 minute.
 
-**disclaimer**: I know of course about the giant power and water consumption of modern AI data centers run by Amazon, Google, Microsoft etc. I have read that each query consumes 0.5l of water. I have been to Corfu in Septemer and heard that they had a dry summer on this green island and people are ask to save water (not the tourist of course) and the water supply will be reduced at night. So this a serious issue and the question for is who might have to pay a heavy price for our new "AI friends" that we aks sometimes real stupid questions? (not the like I was asking of course;)
+**disclaimer**: I know of course about the giant power and water consumption of modern AI data centers run by Amazon, Google, Microsoft etc. I have read that each query consumes 0.5l of water. I have been to Corfu in Septemer and heard that they had a dry summer on this green island and people are ask to save water (not the tourist of course) and the water supply will be reduced at night. So, this a serious issue and the question for me is who might have to pay a heavy price for using our new "AI friends" when we ask sometimes real stupid questions? (not the like I was asking of course;)
 
 **tip:** If you ever will ask your AI friend to do a presentation for you, don't forget to let "him" include some typos;)
