@@ -1,8 +1,12 @@
 # Getting out of (technical) debt
 
+Peter Monadjemi (pm@eureka-fach.de)
+16/10/24
+
+---
 ## Topics
 
-- What is technical debt anyway?
+- What exactly is technical debt?
 - Tools for static source code analysis
 - NDepend overview
 - NDepend licensing
@@ -10,36 +14,37 @@
 - So many metrics, so many numbers
 - The important role of the baseline
 - Analyzing the technical debt in detail
+- Using NDepend with a build server
 - Overview over the NDepend API
 - How to use the NDepend API in simple terms
 - Examples for using the NDepend API
 
 ---
-## What is technical debt anyway?
+## What exactly is technical?
 
 - Its not an official term but a metapher
-- There is a very good explanation on Wikipedia
-- _Ward Cunningham_ (a "software legend") coined the phrase in 1992 when he was working on a Smalltalk application for a finance company
+- There is a good explanation on Wikipedia
+- _Ward Cunningham_ (one of the modern "software legends") coined the phrase in _1992_ when he was working on a Smalltalk application for a finance company
 - "Some problems with code are like financial debt. Shipping first time code is like going into debt" (Ward Cunningham)
 - Other software legends like _Grady Booch_ and _Martin Fowler_ added their own definitions
 
 ---
-## A definition of technical debt
+## Some definitions of technical debt
 
 _Postponing measures to ensure and increase technical quality slows down the development process and increases costs_
 
 The longer a measure is postponed, the more expensive it will be.
 
-Technical debts that is not repaid (by fixing it) counts as interest on that debt.
+Technical debts that are not repaid (by fixing it) counts as interest on that debt.
 
-The metaphor is good for communicating to the management the need for a refactoring.
+The metaphor is good for communicating to the management the need for a refactoring (or more developers).
 
 In the end its all about money.
 
 ---
 ## Different kind of technical debts
 
-_Martin Fowler_ distinguishes two kinds of technical debts:
+_Martin Fowler_ distinguishes two kinds of technical debts
 
 _Those that you have consciously taken in, for example, to reach a milestone, and those that you have entered into unknowingly_.
 
@@ -51,6 +56,7 @@ _Those that you have consciously taken in, for example, to reach a milestone, an
 - No clear separation of concerns
 - Methods with too many lines of code or a high complexity
 - Inconsistent coding and naming standards
+- Ignoring compiler warnings
 - Not applying SOLID principles
 
 ---
@@ -65,10 +71,12 @@ _Those that you have consciously taken in, for example, to reach a milestone, an
 ---
 ## Let the AI assistant teach you software development techniques
 
-Me: Can you apply the SOLID principles to a piece of code that I supply?
-ChatGPT: Absolutely! I'd be happy to help apply the SOLID principles to your code. 
-And: Please provide the code you'd like me to review, and I'll walk you through how to apply each of the SOLID principles.
-	
+**Me**: Can you apply the SOLID principles to a piece of code that I supply?
+
+**ChatGPT:** Absolutely! I'd be happy to help apply the SOLID principles to your code. 
+
+Please provide the code you'd like me to review, and I'll walk you through how to apply each of the SOLID principles.
+
 ---
 ## Reasons for technical debt
 
@@ -76,8 +84,7 @@ And: Please provide the code you'd like me to review, and I'll walk you through 
 - No time because bug fixes and new features have priority
 - No or little quality assurance (like component tests)
 - Deferring refactoring
-- Not enough knowledge (like I heard about _SOLID_ but I don't what it means)
-- Ignoring compiler warnings (there are too many, several hundreds probably)
+- Not enough knowledge (like I heard about _SOLID_ but I don't know what it means)
 - there are more reasons...
 
 ---
@@ -93,10 +100,11 @@ And: Please provide the code you'd like me to review, and I'll walk you through 
 ## You can't fight it if you can't measure it
 
 Technical debt can be measured by a static source code analysis
+
 A static source code analysis offers
 - metrics like LOC or CC
 - a maintainability index
-- "code smells" (like duplicated code or long parameter lists)
+- "code smells" (like duplicated code, dead code or long parameter lists)
 - compliance to coding standards
 - code coverage (how many methods are covered by component tests)
 - calculates the cost of fixing code quality issues
@@ -106,7 +114,7 @@ and more...
 ## Several options
 
 - SonarCube (a Java application)
-- ReSharper (JetBrains)
+- ReSharper aka R# (JetBrains)
 - There used to be FxCop from Microsoft but...
 - Roslyn Analyzers as part of the .Net compiler platform (_Roslyn_)
 - NDepend
@@ -119,9 +127,9 @@ All tools can be integrated into a CI/CD pipeline (like _Azure DevOps_ or _ Jenk
 - offers comprehensive functionalities
 - measures technical debt for each class and method
 - does not support X# on a source code level (some limitations, but still very useful for X# projects)
-- not cheap (800€ for a single license),, but worth the money
-- very fast (analyzing a large project in about a few seconds)
-- the best tool for .Net developers (my opinion)
+- not cheap (800€ for a single license)
+- fast (analyzing a large project in about a few seconds)
+- my personal choice for analyzing any kind of .Net project
 
 ---
 ## NDepend licensing
