@@ -1,4 +1,5 @@
 ﻿// File: NSCodeModel_TypesUsage.prg
+// compile with 
 // List the usage of types
 
 USING System

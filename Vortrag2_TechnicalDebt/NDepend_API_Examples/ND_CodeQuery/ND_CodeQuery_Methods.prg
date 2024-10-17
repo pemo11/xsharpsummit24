@@ -15,7 +15,7 @@ USING NDepend.Path
 USING NDepend.Project
 
 INTERNAL CLASS App
-  PRIVATE STATIC AssResolver := AssemblyResolver{"D:\Program Files\NDepend\Lib"} AS AssemblyResolver
+  PRIVATE STATIC AssResolver := AssemblyResolver{"C:\Program Files\NDepend\Lib"} AS AssemblyResolver
 
   // Entry point
   STATIC METHOD Main() AS VOID

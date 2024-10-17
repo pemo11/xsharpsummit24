@@ -1,5 +1,7 @@
 # Getting out of (technical) debt
 
+Last update: 16/10/2024
+
 ## Topics
 
 - What is technical debt anyway?
@@ -215,6 +217,7 @@ from m in Application.Methods
 - Really fascinating, especially when watching the treemap became greene during a "debt reducing sprint"
 
 ## The important role of the baseline
+
 - NDepends compares the current analysis against an older version of the project
 - Baseline =  previous snapshot of the code
 - The baseline can be choosen on a timeline
@@ -265,6 +268,7 @@ Five levels A to E with individual threshold values.
 ---
 
 ## Overview over the NDepend API
+
 - Everything _Visual NDepend_ can do can be done in code too
 - The NDepend API is used in a CI/CD pipeline for implementing quality gates or for custom tools
 - It can be used from X# and from PowerShell too
@@ -273,6 +277,7 @@ Five levels A to E with individual threshold values.
 - Support is helpful but for detailed answers you have to go to _stackoverflow.com_.
 
 ## How to use the NDepend API in simple terms
+
 - The API is a little "strange"
 - A complete NDepend installation is always necessary
 - All the NDepend assemblies are loaded at runtime
@@ -343,7 +348,6 @@ A  reference to _netstandard.dll_ might not be necessary for every example
 - Some benefits might only be visible in the long run (if at all)
 - Getting to know the current debt is very simple
 - _NDepend_ is an excellent choice (and worth the money)
-- Vote for X# on NDepend User Voice [https://ndepend.uservoice.com]
 
 ---
 ## Thank you!
@@ -351,3 +355,5 @@ A  reference to _netstandard.dll_ might not be necessary for every example
 Any questions?
 
 All examples are in my repo [https://github.com/pemo11/xsharpsummit24]
+
+Don't forget to vote for X# support! [https://ndepend.uservoice.com/]

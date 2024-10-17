@@ -6,7 +6,7 @@ USING System.IO
 USING System.Reflection
 USING System.Windows.Forms
 
-BEGIN NAMESPACE ND_DeptQuery
+BEGIN NAMESPACE ND_DebtQuery
 
   INTERNAL CLASS AssemblyResolver
 
@@ -23,7 +23,7 @@ BEGIN NAMESPACE ND_DeptQuery
                 VAR asmFilePath := Path.Combine(strLibPath, assemblyName:Name + ".dll")
                 Ass := Assembly.LoadFrom(asmFilePath)
             CATCH ex AS SystemException
-                Console.WriteLine("Error:" + ex:Message)
+                Console.WriteLine("Warning:" + ex:Message)
             END TRY
             RETURN Ass
 

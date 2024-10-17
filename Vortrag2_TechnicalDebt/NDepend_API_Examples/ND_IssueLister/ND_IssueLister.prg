@@ -1,6 +1,6 @@
 ﻿// File: ND_IssueLister.prg
 // Summary of all issues Blocker, Critical, High, Medium and Low
-// Compile with /r:System.Configuration.dll /r:NDepend.Api.dll /r:netstandard.dll
+// Compile with ./AssemblyResolver.prg /r:System.Configuration.dll /r:NDepend.Api.dll /r:netstandard.dll
 // /r:netstandard.dll is because of PathHelpers.ToDirectoryPath()?
 // !works only with a Build Machine license!
 
@@ -22,7 +22,7 @@ USING NDepend.Project
 BEGIN NAMESPACE ND_IssueLister
 
 	INTERNAL CLASS App
-		PRIVATE STATIC AssResolver := AssemblyResolver{"D:\Program Files\NDepend\Lib"} AS AssemblyResolver
+		PRIVATE STATIC AssResolver := AssemblyResolver{"C:\Program Files\NDepend\Lib"} AS AssemblyResolver
 
 		// Entry point
 		STATIC METHOD Main() AS VOID
@@ -41,7 +41,7 @@ BEGIN NAMESPACE ND_IssueLister
 			ndProject:Properties:OutputDir := PathHelpers.ToDirectoryPath(Path.Combine(Environment.CurrentDirectory, "../OutputDir"))
 			// Do an analysis
 			Console.WriteLine("*** Starting analysis...")
-			VAR analysisResult := ndProject:RunAnalysis("Test1234")
+         VAR analysisResult := ndProject:RunAnalysis("Test1234")
 			VAR issuesSet := analysisResult:ComputeIssues()
 			// List of all issues only?
 			// Does not work because issues() expect a rule parameter
@@ -51,7 +51,7 @@ BEGIN NAMESPACE ND_IssueLister
       // Prepare Dictionary for output
       var severityDict := Dictionary<NDepend.TechnicalDebt.Severity, Int32>{}
       var total := 0
-      // May be going through all Codelements is not necessaryto get all issues?
+      // May be going through all Codelements is not necessary to get all issues?
       ForEach nCodeElement As ICodeElement IN codebase:CodeElements 
         IF nCodeElement:IsCodeContainer
           // returns a IEnumerable<IIssue>

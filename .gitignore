@@ -7,3 +7,4 @@ NDependOut
 TestResults
 **/.xsproj.user
 **/OutputDir
+*.dll

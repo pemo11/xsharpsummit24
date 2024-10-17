@@ -1,4 +1,6 @@
 ﻿// File: ND_CodeModel_ListTypes.prg
+// Compile with ./AssemblyResolver.prg /r:System.Configuration.dll /r:NDepend.Api.dll /r:netstandard.dll
+// /r:netstandard.dll is because of PathHelpers.ToDirectoryPath()?
 // List all Types
 
 USING System
@@ -15,7 +17,7 @@ USING NDepend.Project
 
 
 INTERNAL CLASS App
-  PRIVATE STATIC AssResolver := AssemblyResolver{"D:\Program Files\NDepend\Lib"} AS AssemblyResolver
+  PRIVATE STATIC AssResolver := AssemblyResolver{"C:\Program Files\NDepend\Lib"} AS AssemblyResolver
 
   // Entry point
   STATIC METHOD Main() AS VOID
