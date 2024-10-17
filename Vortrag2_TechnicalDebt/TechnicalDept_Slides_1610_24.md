@@ -1,10 +1,12 @@
 # Getting out of (technical) debt
 
-Last update: 16/10/2024
+Peter Monadjemi (pm@eureka-fach.de)
+16/10/24
 
+---
 ## Topics
 
-- What is technical debt anyway?
+- What exactly is technical debt?
 - Tools for static source code analysis
 - NDepend overview
 - NDepend licensing
@@ -12,39 +14,41 @@ Last update: 16/10/2024
 - So many metrics, so many numbers
 - The important role of the baseline
 - Analyzing the technical debt in detail
+- Using NDepend with a build server
 - Overview over the NDepend API
 - How to use the NDepend API in simple terms
 - Examples for using the NDepend API
 
 ---
-## What is technical debt anyway?
+## What exactly is technical?
 
 - Its not an official term but a metapher
-- There is a very good explanation on Wikipedia
-- _Ward Cunningham_ (a "software legend") coined the phrase in 1992 when he was working on a Smalltalk application for a finance company
+- There is a good explanation on Wikipedia
+- _Ward Cunningham_ (one of the modern "software legends") coined the phrase in _1992_ when he was working on a Smalltalk application for a finance company
 - "Some problems with code are like financial debt. Shipping first time code is like going into debt" (Ward Cunningham)
 - Other software legends like _Grady Booch_ and _Martin Fowler_ added their own definitions
 
 ---
-## A definition of technical debt
+## Some definitions of technical debt
 
 _Postponing measures to ensure and increase technical quality slows down the development process and increases costs_
 
 The longer a measure is postponed, the more expensive it will be.
 
-Technical debts that is not repaid (by fixing it) counts as interest on that debt.
+Technical debts that are not repaid (by fixing it) counts as interest on that debt.
 
-The metaphor is good for communicating to the management the need for a refactoring.
+The metaphor is good for communicating to the management the need for a refactoring (or more developers).
 
 In the end its all about money.
 
 ---
 ## Different kind of technical debts
 
-_Martin Fowler_ distinguishes two kinds of technical debts:
+_Martin Fowler_ distinguishes two kinds of technical debts
 
 _Those that you have consciously taken in, for example, to reach a milestone, and those that you have entered into unknowingly_.
 
+---
 ## Practices that promote technical debt
 
 - An architecture or code design that makes changes and extensions difficult
@@ -52,6 +56,7 @@ _Those that you have consciously taken in, for example, to reach a milestone, an
 - No clear separation of concerns
 - Methods with too many lines of code or a high complexity
 - Inconsistent coding and naming standards
+- Ignoring compiler warnings
 - Not applying SOLID principles
 
 ---
@@ -61,12 +66,17 @@ _Those that you have consciously taken in, for example, to reach a milestone, an
 - **O**pen Close
 - **L**iskow Substitution
 - **I**nterface Segregation
-- **D**ependeny Inversion
+- **D**ependency Inversion
 
-Me: Can you apply the SOLID principles to a piece of code that I supply?
-ChatGPT: Absolutely! I'd be happy to help apply the SOLID principles to your code. 
-And: Please provide the code you'd like me to review, and I'll walk you through how to apply each of the SOLID principles.
-	
+---
+## Let the AI assistant teach you software development techniques
+
+**Me**: Can you apply the SOLID principles to a piece of code that I supply?
+
+**ChatGPT:** Absolutely! I'd be happy to help apply the SOLID principles to your code. 
+
+Please provide the code you'd like me to review, and I'll walk you through how to apply each of the SOLID principles.
+
 ---
 ## Reasons for technical debt
 
@@ -74,8 +84,7 @@ And: Please provide the code you'd like me to review, and I'll walk you through 
 - No time because bug fixes and new features have priority
 - No or little quality assurance (like component tests)
 - Deferring refactoring
-- Not enough knowledge (like I heard about _SOLID_ but I don't what it means)
-- Ignoring compiler warnings (there are too many, several hundreds probably)
+- Not enough knowledge (like I heard about _SOLID_ but I don't know what it means)
 - there are more reasons...
 
 ---
@@ -91,19 +100,21 @@ And: Please provide the code you'd like me to review, and I'll walk you through 
 ## You can't fight it if you can't measure it
 
 Technical debt can be measured by a static source code analysis
+
 A static source code analysis offers
 - metrics like LOC or CC
 - a maintainability index
-- "code smells" (like duplicated code or long parameter lists)
+- "code smells" (like duplicated code, dead code or long parameter lists)
 - compliance to coding standards
 - code coverage (how many methods are covered by component tests)
 - calculates the cost of fixing code quality issues
 and more...
 
+---
 ## Several options
 
 - SonarCube (a Java application)
-- ReSharper (JetBrains)
+- ReSharper aka R# (JetBrains)
 - There used to be FxCop from Microsoft but...
 - Roslyn Analyzers as part of the .Net compiler platform (_Roslyn_)
 - NDepend
@@ -116,25 +127,26 @@ All tools can be integrated into a CI/CD pipeline (like _Azure DevOps_ or _ Jenk
 - offers comprehensive functionalities
 - measures technical debt for each class and method
 - does not support X# on a source code level (some limitations, but still very useful for X# projects)
-- not cheap (800€ for a single license),, but worth the money
-- very fast (analyzing a large project in about a few seconds)
-- the best tool for .Net developers (my opinion)
+- not cheap (800€ for a single license)
+- fast (analyzing a large project in about a few seconds)
+- my personal choice for analyzing any kind of .Net project
 
 ---
 ## NDepend licensing
+
 - every developer needs a licencse
 - two kind of licenses: Professional and Build
 - Professional: Visual Studio Extension and Visual NDepend as a standalone app
 - Build: The NDepend API (for quality gates etc)
 
 ---
-
 ## Short overview over the dashboard
 
 - Shows every aspect of the source code analsysis
-- important are the issues
-- rules can be reapplied any time
-- Choose a baseline for comparison
+- issues are produced by pre defined rules
+- rules can be modified and reapplied any time
+- technical debt summary from A to E
+- Choose the right baseline for comparison
 
 ---
 ## So many metrics, so many numbers
@@ -142,11 +154,12 @@ All tools can be integrated into a CI/CD pipeline (like _Azure DevOps_ or _ Jenk
 - CC = Cyclomatic complexity (not available for X#)
 - LIC = CC on the IL level
 - LOC = Lines of codes
-- Percentage Comment (not available for X#)
-- Code Coverage - percentage of  the methods covered by tests
+- Percentage comment (not available for X#)
+- Code coverage - percentage of the methods covered by tests
 
 ---
 ## Cyclomatic Complexity
+
 - A simple measurement for the "complexity" of a method
 - M = E - N + 2P
 - E = number of edges in the control flow graph
@@ -170,7 +183,6 @@ FOR i := 1 TO ALEN(items)
 NEXT
 RETURN total
 ```
-
 ---
 ## A simple example (part 2)
  - Count nodes (N) and edges (E)
@@ -187,59 +199,60 @@ RETURN total
 - My recommendation: _dotCover_ from _JetBrains_, export the result as "Extended Xml" and use the xml file with _NDepend_
 
 ---
+## Using queries, rules and quality gates
+- Over 200 rules are predefined
+- Any rule will be applied by selecting it
+- Rule files can be created and shared between _NDepend_ projects
+- They can be part of the source too (but only for C# and VB.Net)
+- Issues generated by Roslyn analyzers can be imported
+
+---
 ## Create new rules or edit existing rules
 - Rule can be written with an extended _LINQ_ syntax (_CQLing_)
 - Powerful and flexible with intellisense in the editor
 - Many examples and videos in the documentation
+**tip:** Don't ask _ChatGPT_ for help, better ask at _stackoverflow.com_
+
+---
+## Example: List all issues
+
+```C#
+from i in Issues
+select new { i, i.Severity, i.Debt, i.AnnualInterest }
+```
+
+---
+## Example: Query the LOC for each method in a project (or class)
+
 ```C#
 from m in Application.Methods 
  where m.NbLinesOfCode > 0 
  orderby m.NbLinesOfCode descending 
  select new { m, m.NbLinesOfCode }).Take(25) 
 ```
-**tip:** Ask ChatGPT for help
-
-## Using rules
-
-- Over 200 rules are predefined
-- Any rule will be applied by selecting it
-- Rule Files can be created and shared among NDepend projects
-- They can be part of the source too (but only C# and VB.Net)
-- Issues generated by Roslyn analyzers can be imported into _NDepend_
-
 ---
 ## From red to green - the treemap
-
 - A treemap visualizes the quality state of the project
 - Treemapping is a visualization algorithm for displaying tree-structured data by using a nested rectangles hierarchy
 - Green means good, red means "room for improvements"
 - The treemap can be based on many different details and on different hierarchies like types
-- Really fascinating, especially when watching the treemap became greene during a "debt reducing sprint"
+- Really fascinating, especially when watching the treemap became "greener" during a "debt reducing sprint"
 
+---
 ## The important role of the baseline
-
-- NDepends compares the current analysis against an older version of the project
-- Baseline =  previous snapshot of the code
+- NDepends allways compares the current analysis against an older snapshot of the code
+- The older snapshot is called Baseline
 - The baseline can be choosen on a timeline
 - Important concept with _NDepend_
 
 ---
-
 ## Analyzing the technical debt in detail
 
-- from the NDepend docu "The technical debt can be seen as the mother of all code metrics."
-- debt is measured per methods, per issue etc.
-- _NDepend_ used the _SCALE_ method internally (**S**everity,**Cost**, **Ability** to implement, **L**ong-term impact, and **E**ase of implementation) for calculating _debt ratio_ and _debt rating_.
+- from the NDepend docu "The technical debt can be seen as the mother of all code metrics"
+- debt is measured per method, per issue etc.
+- _NDepend_ uses the _SCALE_ method internally for calculating for calculating _debt ratio_ and _debt rating_
+- SCALE = **S**everity,**Cost**, **Ability** to implement, **L**ong-term impact, and **E**ase of implementation) .
 - the unit is the "effort" to fix the issue in "man days"
-- Technical debt as a quality gate
-
-```
-failif value > 30%
-warnif value > 20%
-let timeToDev = codeBase.EffortToDevelop()
-let debt = Issues.Sum(i => i.Debt)
-select 100d * debt.ToManDay() / timeToDev.ToManDay()
-```
 
 ---
 ## Debt ratio and debt rating
@@ -254,6 +267,20 @@ Five levels A to E with individual threshold values.
 
 (looks nice, but for me it has only a limited significance)
 
+---
+## Technical debt as a quality gate
+
+- A query returns results
+- A rule outputs issues
+- A quality gate is a regular query with a _failif_ element
+
+```
+failif value > 30%
+warnif value > 20%
+let timeToDev = codeBase.EffortToDevelop()
+let debt = Issues.Sum(i => i.Debt)
+select 100d * debt.ToManDay() / timeToDev.ToManDay()
+```
 
 ---
 ## How to evaluate the results
@@ -266,9 +293,15 @@ Five levels A to E with individual threshold values.
 - cost for fixing - _NDepend_ will deliver the values
 
 ---
+# NDepend as part of a build server
 
+- _NDepend_ works with all major build servers (like Azure DevOps, GitHub Action, Jenkins)
+- Quality Gates are evaluated through _NDepend.Console.exe_
+- A separate license is required for the Azure DevOps extension
+- Technical debt and other code related issues becomes part of the build process
+
+---
 ## Overview over the NDepend API
-
 - Everything _Visual NDepend_ can do can be done in code too
 - The NDepend API is used in a CI/CD pipeline for implementing quality gates or for custom tools
 - It can be used from X# and from PowerShell too
@@ -276,8 +309,8 @@ Five levels A to E with individual threshold values.
 - Documenation is good, but there are no examples except the _NDepend.PowerTools_ project
 - Support is helpful but for detailed answers you have to go to _stackoverflow.com_.
 
+---
 ## How to use the NDepend API in simple terms
-
 - The API is a little "strange"
 - A complete NDepend installation is always necessary
 - All the NDepend assemblies are loaded at runtime
@@ -285,7 +318,6 @@ Five levels A to E with individual threshold values.
 - The examples for this presentation explain how it can be done with a simple AssemblyResolver
 
 ---
-
 ## Examples for using the NDepend API
 
 - I provide a dozen examples for how to use the NDepend API in the repo
@@ -309,7 +341,6 @@ xsc ND_IssueLister.prg ./AssResolver.prg /r:System.Configuration.dll /r:NDepend.
 A  reference to _netstandard.dll_ might not be necessary for every example
 
 ---
-
 ## Some of the NDepend API examples
 
 | Directory                | Purpose                                                      | Remarks                                 |
@@ -356,4 +387,4 @@ Any questions?
 
 All examples are in my repo [https://github.com/pemo11/xsharpsummit24]
 
-Don't forget to vote for X# support! [https://ndepend.uservoice.com/]
+Don't forget to vote for X# support on NDepend User Voice [https://ndepend.uservoice.com]

@@ -1,6 +1,6 @@
 # PowerShell as the X\# developers (new) friend
 
-Last update: **15/10/24**
+Last update: **16/10/24**
 
 ## topics
 
